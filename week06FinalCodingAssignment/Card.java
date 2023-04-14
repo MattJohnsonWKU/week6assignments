@@ -8,7 +8,7 @@ public class Card {
         this.value = value;
         this.name = name;
     }
-
+    // Getters and Setters
     public int getValue() {
         return value;
     }
@@ -24,7 +24,7 @@ public class Card {
     public void setName(String name) {
         this.name = name;
     }
-
+    // Method
     public void describe() {
         System.out.println(this.name);
     }

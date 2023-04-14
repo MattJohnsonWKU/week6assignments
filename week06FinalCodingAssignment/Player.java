@@ -13,7 +13,7 @@ public class Player {
         this.score = 0;
         this.name = name;
     }
-
+    // Methods
     public void describe() {
         System.out.println(this.name + "'s hand:");
         for (Card card : this.hand) {
@@ -40,7 +40,7 @@ public class Player {
     public void drawHand() {
     	this.score += 0;
     }
-
+    // Getters and Setters
     public void setHand(List<Card> hand) {
         this.hand = hand;
     }

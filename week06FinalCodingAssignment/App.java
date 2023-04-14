@@ -4,12 +4,12 @@ public class App {
 
     public static void main(String[] args) {
 
-      // a)	Instantiate a Deck and two Players, call the shuffle method on the deck.
+       // a)	Instantiate a Deck and two Players, call the shuffle method on the deck.
     	
         Deck deck = new Deck();
         Player player1 = new Player("Mattox");
         Player player2 = new Player("Maverick");
-
+       
        
         
         deck.shuffle();
@@ -32,23 +32,34 @@ public class App {
             int result = card1.getValue() - card2.getValue();
             
             System.out.println("Round " + i + ":");
-            System.out.println("-----------------------------");
+            System.out.println("==============================");
             System.out.println(player1.getName() + "'s hand: " + card1.getName());
-            System.out.println(player1.getName() + "'s score: " + player1.getScore());
             System.out.println(player2.getName() + "'s hand: " + card2.getName());
-            System.out.println(player2.getName() + "'s score: " + player2.getScore());
+            
          
 
             if (result > 0) {
-                System.out.println(player1.getName() + " wins the round!");
+                System.out.println("   " + player1.getName() + " wins the round!");
                 player1.incrementScore();
+                System.out.println("------------------------------"); 
+                System.out.println("Current Scores Are: ");
+                System.out.println("   " + player1.getName() + "'s score: " + player1.getScore());
+                System.out.println("   " + player2.getName() + "'s score: " + player2.getScore());
             } else if (result < 0) {
-                System.out.println(player2.getName() + " wins the round!");
+                System.out.println("   " + player2.getName() + " wins the round!");
                 player2.incrementScore();
+                System.out.println("------------------------------"); 
+                System.out.println("Current Scores Are: ");
+                System.out.println("   " + player1.getName() + "'s score: " + player1.getScore());
+                System.out.println("   " + player2.getName() + "'s score: " + player2.getScore()); 
             } else {
-                System.out.println("It's a draw!");
+            	System.out.println("   " + "It's a draw!");
+                System.out.println("------------------------------"); 
+                System.out.println("Current Scores Are: ");
+                System.out.println("   " + player1.getName() + "'s score: " + player1.getScore());
+                System.out.println("   " + player2.getName() + "'s score: " + player2.getScore());
             }
-            System.out.println("-----------------------------");
+            System.out.println("==============================");
           
                        
            
